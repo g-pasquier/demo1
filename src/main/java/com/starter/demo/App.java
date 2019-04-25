@@ -15,11 +15,6 @@ public class App {
 
 	private static Logger logger = Logger.getAnonymousLogger();
 
-	/**
-	 * 
-	 * @author frup70473
-	 *
-	 */
 	private static class Employee {
 		private int age;
 		private String name;
@@ -52,22 +47,22 @@ public class App {
 		}
 	}
 
-	/**
-	 * 
-	 * @param args
-	 */
 	public static void main(String... args) {
 
-		// Employees
+		manageEmployees();
+
+		new DemoService().makeBoards();
+
+	}
+
+	private static void manageEmployees() {
+
 		List<Employee> employees = Arrays.asList(new Employee(22, "Paul"), new Employee(22, "Eric"),
 		        new Employee(27, "Giannis"), new Employee(19, "Julia"));
 		List<Employee> results = employees.stream()
 		        .sorted(Comparator.comparing(Employee::getAge, (a1, a2) -> a1 - a2).thenComparing(Employee::getName))
 		        .collect(Collectors.toList());
 		logger.info("" + results);
-
-		// Board factory
-		new DemoService().makeBoards();
 	}
 
 }
