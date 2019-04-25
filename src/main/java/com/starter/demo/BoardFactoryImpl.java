@@ -7,7 +7,6 @@ package com.starter.demo;
  */
 public class BoardFactoryImpl implements BoardFactory {
 
-	@Override
 	public Board makeBoard(int type) {
 
 		switch (type) {
@@ -15,6 +14,8 @@ public class BoardFactoryImpl implements BoardFactory {
 			return new FreestyleBoard("Savage", Camber.ROCKER);
 		case 1:
 			return new FreerideBoard("Backcountry", Camber.TRUE);
+		case 2:
+			return new FreerideBoard("Cat", Camber.TRUE);
 		default:
 			return null;
 		}

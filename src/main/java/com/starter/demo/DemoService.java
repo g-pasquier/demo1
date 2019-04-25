@@ -15,16 +15,18 @@ public class DemoService {
 	private Logger logger = Logger.getAnonymousLogger();
 
 	/**
+	 * @return
 	 * 
 	 */
-	public void makeBoards() {
+	public List<Board> makeBoards() {
 
-		BoardFactory fac = new BoardFactoryImpl();
+		BoardFactory factory = new BoardFactoryImpl();
 		List<Board> boards = new ArrayList<Board>();
 
 		for (int i = 0; i < 10; i++) {
-			boards.add(fac.makeBoard(new Random().nextInt(2)));
+			boards.add(factory.makeBoard(new Random().nextInt(3)));
 		}
 		logger.info(boards.toString());
+		return boards;
 	}
 }
