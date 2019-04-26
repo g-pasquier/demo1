@@ -44,14 +44,12 @@ public class App {
         // Employees
         displayEmployees();
 
-        // Boarders
-        int nbOf = 5;
-        List<Board> boards = new DemoService().makeBoards(nbOf);
+        // on boards
+        List<Board> boards = new BoardService().makeBoards(5);
 
         for (Board board : boards) {
             if (board instanceof FreestyleBoard) {
                 logger.info("" + board);
-                board.ollie();
             }
         }
 

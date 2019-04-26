@@ -7,8 +7,8 @@ package com.starter.demo;
  */
 public class FreestyleBoard extends Board {
 
-	public FreestyleBoard(String name, Camber camber) {
-		super(name, camber);
-	}
+    public FreestyleBoard(String name, Camber camber, String terrain) {
+        super(name, camber, terrain);
+    }
 
 }

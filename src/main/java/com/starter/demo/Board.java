@@ -9,14 +9,12 @@ public abstract class Board {
 
     String name;
     Camber camber;
+    String level;
 
-    public Board(String name, Camber camber) {
+    public Board(String name, Camber camber, String level) {
         this.name = name;
         this.camber = camber;
-    }
-
-    public void ollie() {
-
+        this.level = level;
     }
 
     @Override

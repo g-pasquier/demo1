@@ -9,7 +9,7 @@ import java.util.Random;
  * @author frup70473
  *
  */
-public class DemoService {
+public class BoardService {
 
     public List<Board> makeBoards(int nbOf) {
 
