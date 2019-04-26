@@ -7,18 +7,21 @@ package com.starter.demo;
  */
 public abstract class Board {
 
-	String name;
-	Camber camber;
+    String name;
+    Camber camber;
 
-	public Board(String name, Camber camber) {
-		super();
-		this.name = name;
-		this.camber = camber;
-	}
+    public Board(String name, Camber camber) {
+        this.name = name;
+        this.camber = camber;
+    }
 
-	@Override
-	public String toString() {
-		return "[name=" + name + ", camber=" + camber + "]";
-	}
+    public void ollie() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "[name=" + name + ", camber=" + camber + "]";
+    }
 
 }
