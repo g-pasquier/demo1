@@ -13,61 +13,61 @@ import java.util.stream.Collectors;
  */
 public class App {
 
-	private static Logger logger = Logger.getAnonymousLogger();
+    private static Logger logger = Logger.getAnonymousLogger();
 
-	private static class Employee {
-		private int age;
-		private String name;
+    private static class Employee {
+        private int age;
+        private String name;
 
-		public int getAge() {
-			return age;
-		}
+        public int getAge() {
+            return age;
+        }
 
-		public void setAge(int age) {
-			this.age = age;
-		}
+        public void setAge(int age) {
+            this.age = age;
+        }
 
-		public String getName() {
-			return name;
-		}
+        public String getName() {
+            return name;
+        }
 
-		public void setName(String name) {
-			this.name = name;
-		}
+        public void setName(String name) {
+            this.name = name;
+        }
 
-		@Override
-		public String toString() {
-			return "[age=" + age + ", name=" + name + "]";
-		}
+        @Override
+        public String toString() {
+            return "[age=" + age + ", name=" + name + "]";
+        }
 
-		public Employee(int age, String name) {
-			super();
-			this.age = age;
-			this.name = name;
-		}
-	}
+        public Employee(int age, String name) {
+            super();
+            this.age = age;
+            this.name = name;
+        }
+    }
 
-	public static void main(String... args) {
+    public static void main(String... args) {
 
-		displayEmployees();
+        displayEmployees();
 
-		int nbOf = 5;
+        int nbOf = 5;
 
-		List<Board> boards = new DemoService().makeBoards(nbOf);
-		for (Board board : boards) {
-			logger.info("" + board);
-		}
+        List<Board> boards = new DemoService().makeBoards(nbOf);
+        for (Board board : boards) {
+            logger.info("" + board);
+        }
 
-	}
+    }
 
-	private static void displayEmployees() {
+    private static void displayEmployees() {
 
-		List<Employee> employees = Arrays.asList(new Employee(22, "Paul"), new Employee(22, "Eric"),
-		        new Employee(27, "Giannis"), new Employee(19, "Julia"));
-		List<Employee> results = employees.stream()
-		        .sorted(Comparator.comparing(Employee::getAge, (a1, a2) -> a1 - a2).thenComparing(Employee::getName))
-		        .collect(Collectors.toList());
-		logger.info("" + results);
-	}
+        List<Employee> employees = Arrays.asList(new Employee(22, "Paul"), new Employee(22, "Eric"),
+                new Employee(27, "Giannis"), new Employee(19, "Julia"));
+        List<Employee> results = employees.stream().sorted(Comparator
+                .comparing(Employee::getAge, (a1, a2) -> a1 - a2).thenComparing(Employee::getName))
+                .collect(Collectors.toList());
+        logger.info("" + results);
+    }
 
 }

@@ -11,14 +11,14 @@ import java.util.Random;
  */
 public class DemoService {
 
-	public List<Board> makeBoards(int nbOf) {
+    public List<Board> makeBoards(int nbOf) {
 
-		BoardFactory factory = new BoardFactoryImpl();
-		List<Board> boards = new ArrayList<Board>();
+        BoardFactory factory = new BoardFactoryImpl();
+        List<Board> boards = new ArrayList<Board>();
 
-		for (int i = 0; i < nbOf; i++) {
-			boards.add(factory.makeBoard(new Random().nextInt(3)));
-		}
-		return boards;
-	}
+        for (int i = 0; i < nbOf; i++) {
+            boards.add(factory.makeBoard(new Random().nextInt(3)));
+        }
+        return boards;
+    }
 }
