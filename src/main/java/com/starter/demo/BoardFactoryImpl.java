@@ -13,9 +13,9 @@ public class BoardFactoryImpl implements BoardFactory {
         case 0:
             return new FreestyleBoard("Feelgood", Camber.ROCKER);
         case 1:
-            return new FreerideBoard("Escape", Camber.TRUE);
+            return new FreestyleBoard("Wildcat", Camber.FLAT);
         case 2:
-            return new FreerideBoard("Broadcast", Camber.TRUE);
+            return new FreerideBoard("Escape", Camber.TRUE);
         default:
             return null;
         }
