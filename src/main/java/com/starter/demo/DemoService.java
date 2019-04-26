@@ -14,10 +14,6 @@ public class DemoService {
 
 	private Logger logger = Logger.getAnonymousLogger();
 
-	/**
-	 * @return
-	 * 
-	 */
 	public List<Board> makeBoards() {
 
 		BoardFactory factory = new BoardFactoryImpl();

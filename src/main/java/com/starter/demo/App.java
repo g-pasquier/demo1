@@ -49,13 +49,13 @@ public class App {
 
 	public static void main(String... args) {
 
-		manageEmployees();
+		displayEmployees();
 
 		new DemoService().makeBoards();
 
 	}
 
-	private static void manageEmployees() {
+	private static void displayEmployees() {
 
 		List<Employee> employees = Arrays.asList(new Employee(22, "Paul"), new Employee(22, "Eric"),
 		        new Employee(27, "Giannis"), new Employee(19, "Julia"));
