@@ -51,7 +51,12 @@ public class App {
 
 		displayEmployees();
 
-		new DemoService().makeBoards();
+		int nbOf = 5;
+
+		List<Board> boards = new DemoService().makeBoards(nbOf);
+		for (Board board : boards) {
+			logger.info("" + board);
+		}
 
 	}
 
