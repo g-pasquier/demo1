@@ -7,12 +7,12 @@ package com.starter.demo;
  */
 public abstract class Board {
 
-    protected String name;
-    protected Camber camber;
+	protected String name;
+	protected Camber camber;
 
-    @Override
-    public String toString() {
-        return "[name=" + name + ", camber=" + camber + "]";
-    }
+	@Override
+	public String toString() {
+		return getClass() + " [name=" + name + ", camber=" + camber + "]";
+	}
 
 }

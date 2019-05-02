@@ -15,7 +15,7 @@ public class BoardTest {
     BoardService serv = null;
 
     @Before
-    public void before() {
+    public void setUp() {
         serv = new BoardService();
     }
 
