@@ -1,10 +1,5 @@
 package com.starter.demo;
 
-/**
- * 
- * @author frup70473
- *
- */
 public abstract class Board {
 
 	protected String name;

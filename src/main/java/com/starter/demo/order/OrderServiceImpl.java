@@ -13,7 +13,6 @@ public class OrderServiceImpl implements OrderService {
 		Order order = new Order();
 		order.setId(new Random().nextInt());
 		order.setItems(items);
-
 		order.setTotalPrice(items.stream().mapToInt(b -> b.getPrice()).sum());
 
 		return order;

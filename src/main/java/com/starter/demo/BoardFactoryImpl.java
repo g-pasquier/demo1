@@ -22,7 +22,8 @@ public class BoardFactoryImpl implements BoardFactory {
 			b.setPrice(440);
 			return b;
 		default:
-			return null;
+			return new Board() {
+			};
 		}
 	}
 
