@@ -11,7 +11,7 @@ import java.util.Random;
  */
 public class BoardService {
 
-    public List<Board> makeBoards(int nbOf) {
+    public List<Board> generateRandomBoards(int nbOf) {
 
         BoardFactory factory = new BoardFactoryImpl();
         List<Board> boards = new ArrayList<Board>();

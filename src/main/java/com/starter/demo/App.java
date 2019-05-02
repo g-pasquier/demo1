@@ -45,7 +45,7 @@ public class App {
         displayEmployees();
 
         // on boards
-        List<Board> boards = new BoardService().makeBoards(5);
+        List<Board> boards = new BoardService().generateRandomBoards(5);
 
         for (Board board : boards) {
             if (board instanceof FreestyleBoard) {

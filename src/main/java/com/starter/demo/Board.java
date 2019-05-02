@@ -7,15 +7,8 @@ package com.starter.demo;
  */
 public abstract class Board {
 
-    String name;
-    Camber camber;
-    String level;
-
-    public Board(String name, Camber camber, String level) {
-        this.name = name;
-        this.camber = camber;
-        this.level = level;
-    }
+    protected String name;
+    protected Camber camber;
 
     @Override
     public String toString() {
