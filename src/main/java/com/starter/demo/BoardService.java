@@ -13,7 +13,7 @@ public class BoardService {
 
 	public List<Board> generateRandomBoards(int nbOf) {
 
-		BoardFactory factory = BoardFactoryImpl.getInstance();
+		BoardFactory factory = new BoardFactoryImpl();
 		List<Board> boards = new ArrayList<Board>();
 
 		for (int i = 0; i < nbOf; i++) {

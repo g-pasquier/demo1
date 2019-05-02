@@ -7,23 +7,20 @@ package com.starter.demo;
  */
 public class BoardFactoryImpl implements BoardFactory {
 
-	private static BoardFactoryImpl instance;
-
-	public static synchronized BoardFactoryImpl getInstance() {
-		if (instance == null) {
-			instance = new BoardFactoryImpl();
-		}
-		return instance;
-	}
-
 	public Board makeBoard(int type) {
 		switch (type) {
 		case 0:
-			return new FreestyleBoard("Feelgood", Camber.ROCKER);
+			Board b = new FreestyleBoard("Feelgood", Camber.ROCKER);
+			b.setPrice(350);
+			return b;
 		case 1:
-			return new FreestyleBoard("Wildcat", Camber.FLAT);
+			b = new FreestyleBoard("Wildcat", Camber.FLAT);
+			b.setPrice(399);
+			return b;
 		case 2:
-			return new FreerideBoard("Escape", Camber.TRUE);
+			b = new FreerideBoard("Escape", Camber.TRUE);
+			b.setPrice(440);
+			return b;
 		default:
 			return null;
 		}
