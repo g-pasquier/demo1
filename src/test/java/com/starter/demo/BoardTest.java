@@ -28,19 +28,19 @@ public class BoardTest {
 	@Test
 	public void test_make_zero() {
 		int nbOf = 0;
-		assertTrue(serv.generateRandomBoards(nbOf).size() == nbOf);
+		assertTrue(serv.createBoards(nbOf).size() == nbOf);
 	}
 
 	@Test
 	public void test_make_one() {
 		int nbOf = 1;
-		assertTrue(serv.generateRandomBoards(nbOf).size() == nbOf);
+		assertTrue(serv.createBoards(nbOf).size() == nbOf);
 	}
 
 	@Test
 	public void test_make_correct_type() {
 		int nbOf = 1;
-		assertTrue(serv.generateRandomBoards(nbOf).get(0) instanceof Board);
+		assertTrue(serv.createBoards(nbOf).get(0) instanceof Board);
 	}
 
 }

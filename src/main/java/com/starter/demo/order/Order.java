@@ -28,7 +28,7 @@ public class Order<T> {
 		return totalPrice;
 	}
 
-	public void setTotalPrice(int totalPrice) {
+	public void setTotalAmount(int totalPrice) {
 		this.totalPrice = totalPrice;
 	}
 

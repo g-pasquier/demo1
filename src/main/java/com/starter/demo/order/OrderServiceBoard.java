@@ -10,11 +10,10 @@ public class OrderServiceBoard implements OrderService<Board> {
 	@Override
 	public Order<Board> add(List<?> items) {
 
-		Order<Board> order = new Order<Board>();
+		Order<Board> order = new Order<>();
 		order.setId(new Random().nextInt());
 		order.setItems(items);
-		order.setTotalPrice(items.stream().mapToInt(b -> ((Board) b).getPrice()).sum());
-
+		order.setTotalAmount(items.stream().mapToInt(b -> ((Board) b).getPrice()).sum());
 		return order;
 	}
 

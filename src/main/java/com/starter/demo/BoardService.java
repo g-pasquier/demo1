@@ -11,12 +11,13 @@ import java.util.Random;
  */
 public class BoardService {
 
-	public List<Board> generateRandomBoards(int nbOf) {
+	public List<Board> createBoards(int nbOf) {
 
 		BoardFactory factory = new BoardFactoryImpl();
 		List<Board> boards = new ArrayList<Board>();
 
-		for (int i = 0; i < nbOf; i++) {
+		int i = 0;
+		while (i++ < nbOf) {
 			boards.add(factory.makeBoard(new Random().nextInt(3)));
 		}
 		return boards;
