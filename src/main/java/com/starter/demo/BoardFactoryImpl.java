@@ -1,10 +1,5 @@
 package com.starter.demo;
 
-/**
- * 
- * @author frup70473
- *
- */
 public class BoardFactoryImpl implements BoardFactory {
 
 	public Board makeBoard(int type) {

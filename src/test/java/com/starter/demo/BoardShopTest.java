@@ -2,15 +2,12 @@ package com.starter.demo;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.Random;
+
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * 
- * @author frup70473
- *
- */
-public class BoardTest {
+public class BoardShopTest {
 
 	BoardService serv = null;
 
@@ -22,7 +19,7 @@ public class BoardTest {
 	@Test
 	public void test_factory_one_board() {
 		BoardFactory facto = new BoardFactoryImpl();
-		assertTrue(facto.makeBoard(-1) instanceof Board);
+		assertTrue(facto.makeBoard(new Random().nextInt(10)) instanceof Board);
 	}
 
 	@Test
@@ -40,7 +37,7 @@ public class BoardTest {
 	@Test
 	public void test_make_correct_type() {
 		int nbOf = 1;
-		assertTrue(serv.createBoards(nbOf).get(0) instanceof Board);
+		assertTrue(serv.createBoards(nbOf).stream().findAny().get() instanceof Board);
 	}
 
 }
