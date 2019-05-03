@@ -21,8 +21,9 @@ public class App {
 	public static void main(String... args) {
 
 		LocalDateTime started = LocalDateTime.now();
+		int nbOf = 15;
 
-		Order<Board> boardOrder = new OrderServiceBoard().add(new BoardService().createBoards(15));
+		Order<Board> boardOrder = new OrderServiceBoard().add(new BoardService().createBoards(nbOf));
 		logger.info(boardOrder.toString());
 
 		Order<Equipment> equipmentOrder = new OrderServiceEquipment().add(Arrays.asList(new Equipment("Donut", 150)));
