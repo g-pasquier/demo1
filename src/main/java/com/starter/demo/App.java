@@ -18,12 +18,12 @@ public class App {
 	public static void main(String... args) {
 
 		// on boards
-		List<Board> boards = new BoardService().generateRandomBoards(10);
+		List<Board> boards = new BoardService().generateRandomBoards(5);
 		for (Board board : boards) {
 			logger.info("" + board);
 		}
 
-		Order ready = new OrderServiceImpl().add(boards);
+		Order<Board> ready = new OrderServiceImpl().add(boards);
 		logger.info(ready.toString());
 	}
 

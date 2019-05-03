@@ -2,12 +2,10 @@ package com.starter.demo.order;
 
 import java.util.List;
 
-import com.starter.demo.Board;
-
-public class Order {
+public class Order<T> {
 
 	private int id;
-	private List<Board> items;
+	private List<T> items;
 	private int totalPrice;
 
 	public int getId() {
@@ -18,11 +16,11 @@ public class Order {
 		this.id = id;
 	}
 
-	public List<Board> getItems() {
+	public List<T> getItems() {
 		return items;
 	}
 
-	public void setItems(List<Board> items) {
+	public void setItems(List<T> items) {
 		this.items = items;
 	}
 

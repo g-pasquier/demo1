@@ -8,9 +8,9 @@ import com.starter.demo.Board;
 public class OrderServiceImpl implements OrderService {
 
 	@Override
-	public Order add(List<Board> items) {
+	public Order<Board> add(List<Board> items) {
 
-		Order order = new Order();
+		Order<Board> order = new Order<Board>();
 		order.setId(new Random().nextInt());
 		order.setItems(items);
 		order.setTotalPrice(items.stream().mapToInt(b -> b.getPrice()).sum());
