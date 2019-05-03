@@ -5,7 +5,7 @@ import java.util.List;
 public class Order<T> {
 
 	private int id;
-	private List<T> items;
+	private List<?> items;
 	private int totalPrice;
 
 	public int getId() {
@@ -16,11 +16,11 @@ public class Order<T> {
 		this.id = id;
 	}
 
-	public List<T> getItems() {
+	public List<?> getItems() {
 		return items;
 	}
 
-	public void setItems(List<T> items) {
+	public void setItems(List<?> items) {
 		this.items = items;
 	}
 

@@ -2,10 +2,8 @@ package com.starter.demo.order;
 
 import java.util.List;
 
-import com.starter.demo.Board;
+public interface OrderService<T> {
 
-public interface OrderService {
-
-	Order add(List<Board> items);
+	Order<?> add(List<?> items);
 
 }

@@ -5,15 +5,15 @@ import java.util.Random;
 
 import com.starter.demo.Board;
 
-public class OrderServiceImpl implements OrderService {
+public class OrderServiceBoard implements OrderService<Board> {
 
 	@Override
-	public Order<Board> add(List<Board> items) {
+	public Order<Board> add(List<?> items) {
 
 		Order<Board> order = new Order<Board>();
 		order.setId(new Random().nextInt());
 		order.setItems(items);
-		order.setTotalPrice(items.stream().mapToInt(b -> b.getPrice()).sum());
+		order.setTotalPrice(items.stream().mapToInt(b -> ((Board) b).getPrice()).sum());
 
 		return order;
 	}

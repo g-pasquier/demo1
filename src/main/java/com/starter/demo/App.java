@@ -1,10 +1,12 @@
 package com.starter.demo;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
 
 import com.starter.demo.order.Order;
-import com.starter.demo.order.OrderServiceImpl;
+import com.starter.demo.order.OrderServiceBoard;
+import com.starter.demo.order.OrderServiceEquipment;
 
 /**
  * 
@@ -22,9 +24,11 @@ public class App {
 		for (Board board : boards) {
 			logger.info("" + board);
 		}
+		Order<Board> firstOrder = new OrderServiceBoard().add(boards);
+		logger.info(firstOrder.toString());
 
-		Order<Board> ready = new OrderServiceImpl().add(boards);
-		logger.info(ready.toString());
+		Order<Equipment> nextOrder = new OrderServiceEquipment().add(Arrays.asList(new Equipment("Fix-a", 90)));
+		logger.info(nextOrder.toString());
 	}
 
 }
