@@ -1,10 +1,11 @@
 package com.starter.demo.order;
 
 import java.util.List;
+import java.util.Random;
 
 public class Order<T> {
 
-	private int id;
+	private int id = Math.abs(new Random().nextInt());
 	private List<?> items;
 	private int totalPrice;
 
