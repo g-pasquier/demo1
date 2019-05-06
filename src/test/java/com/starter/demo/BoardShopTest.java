@@ -7,6 +7,8 @@ import java.util.Random;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.starter.demo.order.Order;
+
 public class BoardShopTest {
 
 	BoardService serv = null;
@@ -38,6 +40,13 @@ public class BoardShopTest {
 	public void test_make_correct_type() {
 		int nbOf = 1;
 		assertTrue(serv.createBoards(nbOf).stream().findAny().get() instanceof Board);
+	}
+
+	@Test
+	public void test_has_different_order_ids() {
+		Order<Board> a = new Order<>();
+		Order<Board> b = new Order<>();
+		assertTrue(a.getId() != b.getId());
 	}
 
 }
