@@ -16,20 +16,20 @@ import com.starter.demo.order.OrderServiceEquipment;
  */
 public class App {
 
-	private static Logger logger = Logger.getAnonymousLogger();
+    private static Logger logger = Logger.getAnonymousLogger();
 
-	public static void main(String... args) {
+    public static void main(String... args) {
 
-		LocalDateTime started = LocalDateTime.now();
-		int nbOf = 15;
+        LocalDateTime started = LocalDateTime.now();
+        int nbItems = 10;
 
-		Order<Board> boardOrder = new OrderServiceBoard().add(new BoardService().createBoards(nbOf));
-		logger.info(boardOrder.toString());
+        Order<Board> boardOrder = new OrderServiceBoard().add(new BoardService().createBoards(nbItems));
+        logger.info(boardOrder.toString());
 
-		Order<Equipment> equipmentOrder = new OrderServiceEquipment().add(Arrays.asList(new Equipment("Donut", 150)));
-		logger.info(equipmentOrder.toString());
+        Order<Equipment> equipmentOrder = new OrderServiceEquipment().add(Arrays.asList(new Equipment("Donut", 150)));
+        logger.info(equipmentOrder.toString());
 
-		logger.info("Took " + Duration.between(started, LocalDateTime.now()).toMillis());
-	}
+        logger.info("Took " + Duration.between(started, LocalDateTime.now()).toMillis());
+    }
 
 }
